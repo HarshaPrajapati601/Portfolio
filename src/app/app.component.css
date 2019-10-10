@@ -14,7 +14,7 @@ body {
     padding-left: 23px;
 }
 .mat-list-base{
-    width: 200px;
+    width: 221px;
 }
 .mat-icon-button{
     padding: 0;
@@ -131,3 +131,12 @@ body {
       animation-delay:0s;
       -webkit-animation-delay:0s; /* Safari 和 Chrome */
   }
+.usersidenav,.usersidenav li{
+    list-style-type: none;
+    padding-left: 2px !important;
+}
+.imgsidenav{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
