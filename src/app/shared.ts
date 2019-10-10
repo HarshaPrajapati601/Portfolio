@@ -40,10 +40,12 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgModule } from '@angular/core';
-
+//lightbox
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
     imports:[ 
+        LightboxModule,
             FlexLayoutModule,
             MatIconModule,
             MatToolbarModule,
