@@ -22,24 +22,22 @@
             Resume
           </a>
       </li>
-      <li class="ng-star-inserted">
-         
-      <a [matMenuTriggerFor]="menu"> 
-       
-            Gallery
-          
-      </a>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item><a class="nav-link" routerLink="/gallery"  title="gallery">
-          My Arts
+      <li class="ng-star-inserted">       
+        <a [matMenuTriggerFor]="menu">   
+              Gallery          
         </a>
-      </button>
-        <button mat-menu-item>
-            <a class="nav-link" routerLink="/carousel"  title="carousel">
-              Caraousel
-            </a>
-        </button>
-      </mat-menu>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+              <a class="nav-link" routerLink="/gallery"  title="gallery">
+              My Arts
+              </a>
+          </button>
+          <button mat-menu-item>
+              <a class="nav-link" routerLink="/carousel"  title="carousel">
+                Caraousel
+              </a>
+          </button>
+        </mat-menu>
       </li>
       <i class="fa fa-refresh" ></i> 
       <li class="ng-star-inserted">
@@ -48,25 +46,40 @@
           </a>
             <!-- <span class="nav-link-inner">Contact</span> -->
           
-        </li>
-      
-      </ul>
-         
+        </li>     
+      </ul>    
         </div>
       </mat-toolbar-row>
     </mat-toolbar> 
     <mat-sidenav-container fxFlexFill>
       <mat-sidenav #sidenav>
-        <mat-nav-list>     
+        <mat-nav-list>  
+          <ul class="usersidenav">
+              <li><div class="user-view">
+                  <div class="background">
+                    <img src="../assets/images/profilesimg/BIANCANEVE.jpeg" class="imgsidenav">
+                  </div>
+                  <a href="https://www.linkedin.com/in/harsha-prajapati-b9a36198/"><img class="circle" src="../assets/images/headerImages/linkedin (1).svg"
+                    style="    height: 25px;
+                    width: 46px;"></a>
+                 
+                  <a  style="font-size: 14px;" href="harshap744@gmail.com" >harshap744@gmail.com</a>
+                </div>
+              </li>
+          </ul>   
           <a (click)="sidenav.toggle()" mat-list-item>Close</a>
         
           <a class="nav-link" routerLink="/home"  title="home">
             Home
           </a>
-          <a class="nav-link" href="gallery/" title="gallery">
+         
+          <a class="nav-link" routerLink="/gallery" title="gallery">
             Gallery
           </a>
-          <a class="nav-link" href="/resume" title="resume">
+         
+     
+
+          <a class="nav-link" routerLink="/resume" title="resume">
               Resume
             </a>
            

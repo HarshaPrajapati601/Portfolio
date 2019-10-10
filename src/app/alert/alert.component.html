@@ -2,24 +2,43 @@
       
 
 
+<div class="container">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
-
-<div>
-    <div class="col-12"data-target="#demo">
-        <p style="text-align: center">
-            <figure class="figure">
-                <img src="../assets/images/cartoonGirl.jpg"  class="rounded-circle profileImage figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-                <figcaption class="figure-caption">Art is Not what you SEE</figcaption>
-            </figure>
-        </p> 
-    </div>
-    
-    <div class="col-12">
-        <div class="well" matTooltip="ASP.net and jquery I know the basics" style="text-align: center">
-            <h3>Hello , I'm Harsha!</h3>
-            <h6>FrontEnd Web Developer</h6>
-            <p>Html/Css | Javascript | Angular 7 | Jquery | Sql | Asp Dot Net </p>            
-        </div>
-    </div>
+                <!-- Position Column -->
+                <ng-container matColumnDef="code">
+                  <th mat-header-cell *matHeaderCellDef> Code </th>
+                  <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="gender">
+                  <th mat-header-cell *matHeaderCellDef> Gender </th>
+                  <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="salary">
+                    <th mat-header-cell *matHeaderCellDef> Salary </th>
+                    <td mat-cell *matCellDef="let element"> {{element.salary}} </td>
+                    </ng-container>
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="dateOfBirth">
+                  <th mat-header-cell *matHeaderCellDef> Date of Birth </th>
+                  <td mat-cell *matCellDef="let element"> {{element.dateOfBirth}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+              
+              
 </div>
-  
+

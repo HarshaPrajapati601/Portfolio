@@ -2,6 +2,7 @@
     border-left: solid 27px #F8B423;
     border-right: solid 27px #f8b423;
     margin-top: 23px;
+    
     font-family: sans-serif;
     background-color: 	 #f9ebd2;
 }
@@ -46,7 +47,7 @@
 }
 .ulList{
     position: absolute;
-    right: 0;
+    right: 0px;
     list-style-type: none;
     display: flex;
 }
@@ -56,4 +57,7 @@
 .bigImg{
     width: 17%;
     height: auto;
+}
+.boxx{
+    position: absolute;
 }
