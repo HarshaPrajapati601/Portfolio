@@ -2,7 +2,6 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import {trigger,state,style,animate,keyframes,transition} from '@angular/animations'
 import { AlertService } from '../common/service/alert.service';
-import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -15,11 +14,11 @@ export class HomeComponent implements OnInit {
   private subscription:Subscription;
   message :any;
   state:string ='small';
-  constructor(config: NgbCarouselConfig,
+  constructor(
     private alertService: AlertService) {
     // customize default values of carousels used by this component tree
-    config.showNavigationArrows = true;
-    config.showNavigationIndicators = true;
+    // config.showNavigationArrows = false;
+    // config.showNavigationIndicators = false;
   }
 
   ngOnInit() {
