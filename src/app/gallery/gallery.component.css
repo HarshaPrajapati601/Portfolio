@@ -1,0 +1,39 @@
+
+.artImage{
+    width: 263px;
+    margin: 17px 30px 20px 0px;
+    height: 205px;
+
+    background-color: teal;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+
+.mat-menu-panel{
+    margin-top: 20px;
+}
+
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes example {
+    0%   {background-color:teal; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:black; left:0px; top:0px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:green; left:0px; top:200px;}
+   
+    50%  {background-color:blue; left:0px; top:0px;}
+ 
+  }

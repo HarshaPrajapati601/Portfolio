@@ -1,0 +1,81 @@
+mat-toolbar.mat-toolbar mat-toolbar-row{
+    padding: 19px 0px 22px 18px;
+
+}
+.mat-toolbar-multiple-rows {
+    min-height: 64px;
+}
+.designlogo{
+    font-size: 19px;
+    padding-left: 23px;
+}
+.mat-list-base{
+    width: 200px;
+}
+.mat-icon-button{
+    padding: 0;
+    min-width: 0;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.mat-toolbar-multiple-rows {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 100%;
+}
+.nav-link.home {
+    cursor: pointer;
+    color:orange;
+    margin: 28px 16px 0 0;
+    padding: 21px 0;
+}
+.imglogo{
+    position: relative;
+    top: -3px;
+    left: -4px;
+}
+.headerlist{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    
+    margin-top: 19px;
+
+    align-items: center;
+}
+.headerlist a{
+    color:navy !important;
+}
+.headerlist a:hover{
+    color:grey !important;
+}
+.toolbar-external-icons-container{
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    
+}
+
+    .mat-toolbar-row, .mat-toolbar-single-row{
+        justify-content: space-between;
+    }
+.mat-drawer-container{
+    height: 100%;
+    margin: 0px;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+.profileImage{
+    margin: 0 auto;
+    height: 250px;
+    width: 250px;
+}
+.carousalImage{
+    height: 300px;
+    width: 100%;
+}

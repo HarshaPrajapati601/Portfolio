@@ -1,0 +1,16 @@
+ <div class="alert-success">
+   Show:
+ 
+   <input type="radio" name="options" value="All" [(ngModel)]="selectedRadioValue" (change)="onRadioSelectionChange()">
+   <span style="margin-right: 15px;">{{("All("+all+")")}}</span>
+
+   <input type="radio" name="options" value="male" [(ngModel)]="selectedRadioValue" (change)="onRadioSelectionChange()">
+   <span style="margin-right: 15px;" >{{("Male("+male+")")}}</span>
+
+   <input type="radio" name="options" value="female" [(ngModel)]="selectedRadioValue" (change)="onRadioSelectionChange()">
+   <span>{{("Female("+female+")")}}</span>
+ </div>
+<br/>
+ <div class="alert-warning">
+    <label>Yoh have entered /the input recieved is :</label>{{enteredValue}}
+ </div>

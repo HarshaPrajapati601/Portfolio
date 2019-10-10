@@ -1,0 +1,22 @@
+.container{
+   
+    position: absolute;
+    right: 67px;
+    width: 412px;
+    max-width: 100%;
+    padding: 27px;
+    
+    background-color: white;
+
+}
+.card{
+    border:none !important;
+}
+.imagegirl{
+    left: 36px;
+    top: 4px;
+    width: 261px;
+    position: relative;
+    border-radius: 50%;
+    height: 263px;
+}

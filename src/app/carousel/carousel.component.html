@@ -1,0 +1,11 @@
+<ngb-carousel>
+        <ng-template ngbSlide *ngFor="let cimage of carasoulImage">
+            <div class="picsum-img-wrapper">
+            <img [src]="cimage.path" alt="Random first slide" class="carousalImage"> 
+            </div>
+            <div class="carousel-caption">
+            <h3>{{cimage.label1}}</h3>
+            <p>{{cimage.label2}}</p>
+            </div>
+        </ng-template>    
+     </ngb-carousel>
