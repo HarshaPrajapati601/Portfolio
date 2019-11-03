@@ -6,8 +6,12 @@ body {
     height: 7500px;
     width: 5000px;
   }
-.mat-toolbar-multiple-rows {
+/* .mat-toolbar-multiple-rows {
     min-height: 64px;
+} */
+
+.mat-drawer-inner-container{
+    background-color: #9d733b !important;
 }
 .designlogo{
     font-size: 19px;
@@ -52,8 +56,9 @@ body {
     align-items: center;
 }
 .headerlist a{
-    color:navy !important;
+ color:#c39960 !important;
 }
+
 .headerlist a:hover{
     color:grey !important;
 }
@@ -66,6 +71,8 @@ body {
 
     .mat-toolbar-row, .mat-toolbar-single-row{
         justify-content: space-between;
+        background-color: #3a2b17;
+        color: #c39960;
     }
 .mat-drawer-container{
     height: 100%;

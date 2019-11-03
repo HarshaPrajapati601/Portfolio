@@ -22,6 +22,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { UserTablesComponent } from './user-tables/user-tables.component';
 import { ResumeComponent } from './resume/resume.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 
@@ -39,7 +40,8 @@ import { ResumeComponent } from './resume/resume.component';
     GalleryComponent,
     CarouselComponent,
     UserTablesComponent,
-    ResumeComponent
+    ResumeComponent,
+    PortfolioComponent
     
   
   ],

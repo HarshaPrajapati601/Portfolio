@@ -2,6 +2,16 @@ mat-toolbar.mat-toolbar mat-toolbar-row{
     padding: 19px 0px 22px 18px;
 
 }
+.bgimage{
+    position: relative;
+    opacity: 0.75;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 96vh;
+    background-image: url("../../assets/images/computerpen.jpg");
+}
 .mat-toolbar-multiple-rows {
     min-height: 64px;
 }
@@ -27,32 +37,14 @@ mat-toolbar.mat-toolbar mat-toolbar-row{
     flex-direction: column;
     width: 100%;
 }
-.nav-link.home {
-    cursor: pointer;
-    color:orange;
-    margin: 28px 16px 0 0;
-    padding: 21px 0;
-}
+
 .imglogo{
     position: relative;
     top: -3px;
     left: -4px;
 }
-.headerlist{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    
-    margin-top: 19px;
 
-    align-items: center;
-}
-.headerlist a{
-    color:navy !important;
-}
-.headerlist a:hover{
-    color:grey !important;
-}
+
 .toolbar-external-icons-container{
     display: flex;
     -webkit-flex-direction: row;
@@ -72,8 +64,8 @@ mat-toolbar.mat-toolbar mat-toolbar-row{
 }
 .profileImage{
     margin: 0 auto;
-    height: 351px;
-    width: 334px;
+    height: 290px;
+    width: 277px;
 }
 .carousalImage{
     height: 300px;
@@ -99,4 +91,35 @@ ngb-carousel{
   }
   .my-custom-class .arrow::before {
     border-top-color: darkgreen;
+  }
+
+  .container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+   img {vertical-align: middle;}
+  
+  .content {
+   
+    position: relative;
+    bottom: 18px;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 50%;
+    margin:0 auto;
+    padding: 20px;
+  }
+  /* .imagebook{
+    opacity: 0.75;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
   }
