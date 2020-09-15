@@ -4,8 +4,7 @@ padding-top: 15px;
     width: 412px;
     max-width: 100%;
     padding: 27px;
-    
-    background-color: white;
+    background-color: #819EA6;
 
 }
 .card{
@@ -18,4 +17,14 @@ padding-top: 15px;
     position: relative;
     border-radius: 50%;
     height: 263px;
+}
+.main-0{
+    background-color: #EDEBE6;
+}
+
+.logo-img{
+    height: 68%;
+    position: absolute;
+    top: 100px;
+    width: 73%;
 }

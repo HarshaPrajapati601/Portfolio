@@ -4,5 +4,6 @@ export interface Iemployee{
       gender:string;
       dateOfBirth:string;
       salary:number;
+      highlighted?: boolean;
 
 }

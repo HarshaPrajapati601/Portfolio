@@ -2,6 +2,9 @@ mat-toolbar.mat-toolbar mat-toolbar-row{
     padding: 19px 0px 22px 18px;
 
 }
+.arrowdown{
+    height: 40px;
+}
 .bgimage{
     position: relative;
     opacity: 0.75;
@@ -122,4 +125,36 @@ ngb-carousel{
     body {
       background-color: lightblue;
     }
+  }
+  .buttondown{
+    /* position: absolute; */
+    left: 50%;
+    bottom: 41px;
+  }
+  .affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+   position: relative;
+   top: 50px;
+  }
+  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5; height: 700px;}
+  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;height: 700px;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;height: 700px;}
+  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;height: 700px;}
+  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;height: 700px;}
+
+  .current-section {
+    
+    color:#c39960 !important;
+  }
+
+  .rotatearrow{
+    transform: rotate(180deg);
   }

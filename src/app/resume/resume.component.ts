@@ -11,7 +11,7 @@ export class ResumeComponent implements OnInit {
 
   constructor(private sanitizer: DomSanitizer) { }
   fileUrl;
-  URL= "../../assets/files/MyResume.pdf"
+  URL= "../../assets/files/Harsha_Resume.pdf"
   ngOnInit() {
     const data = 'some text';
     const blob = new Blob([data], { type: 'application/octet-stream' });

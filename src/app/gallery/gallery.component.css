@@ -24,14 +24,23 @@
   
 .thumbnail{
   display: inline-block;
-  margin-bottom: 35px;
+ 
 
 }
+.containerone{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+}
 
-
-img{
+.smallImages{
   width: 340PX;
   height: 311px;
+  margin:29px 20px;
+}
+.imageWater{
+  width: 500px;
+  height: 600px;
 }
 img:hover{
   cursor: pointer;

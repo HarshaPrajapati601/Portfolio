@@ -9,9 +9,8 @@ body {
 /* .mat-toolbar-multiple-rows {
     min-height: 64px;
 } */
-
-.mat-drawer-inner-container{
-    background-color: #9d733b !important;
+.maindiv{
+    height: 93vh
 }
 .designlogo{
     font-size: 19px;
@@ -19,6 +18,13 @@ body {
 }
 .mat-list-base{
     width: 221px;
+}
+.jumbotron1{
+    position: relative;
+    top: 70px;
+    left: 47px;
+    display: flex;
+    width: 50%;
 }
 .mat-icon-button{
     padding: 0;
