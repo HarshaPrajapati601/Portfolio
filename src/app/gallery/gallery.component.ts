@@ -12,7 +12,7 @@ export class GalleryComponent implements OnInit {
   album:any = [];
   paintType:string = 'water';
   albumWater:any =[
-    {src:'../../assets/images/Myart/b.JPG','thumb':'../../assets/images/Myart/b.JPG'},
+    {src:'../../assets/images/Myart/b.jpg','thumb':'../../assets/images/Myart/b.jpg'},
     {src:'../../assets/images/Myart/b1.jpg','thumb':'../../assets/images/Myart/b1.jpg'}
 
   ];
