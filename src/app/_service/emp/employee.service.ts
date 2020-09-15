@@ -1,13 +1,30 @@
 import { Injectable } from '@angular/core';
 import { Iemployee } from 'src/app/employee';
+import { HttpClientModule ,HttpClient} from '@angular/common/http';
+import { Observable } from "rxjs";
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
+  usersUrlPath:string = "https://api.github.com/users/andrew/repos";
 
-  constructor() { }
+  constructor(private _http:HttpClient,
+    ) { }
+getUsersGit():Observable<any>{
+  return this._http.get(this.usersUrlPath)
+  
+    // .map((response:Response)=>{
+    //   console.log("my git app response",response);
+    //   response.json();
+    // })
+  
+ 
+
+}
+
   getEmployees():Iemployee[]{
       return [
 

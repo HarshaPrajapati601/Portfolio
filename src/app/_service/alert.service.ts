@@ -8,6 +8,7 @@ import {Observable,Subject} from 'rxjs';
 export class AlertService {
   private subject = new Subject<any>();
   private keepAfterNavigationChange= false;
+
   constructor(private router:Router) { 
      // clear alert message on route change
      router.events.subscribe(events=>{
@@ -34,7 +35,5 @@ error(message: string, keepAfterNavigationChange = false) {
 }
   getMessage():Observable<any>{
     return this.subject.asObservable();
-  }
-
-  
+  } 
 }

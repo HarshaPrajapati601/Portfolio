@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Validators, FormGroup, FormControlName,FormBuilder } from '@angular/forms';
-import { ThrowStmt } from '@angular/compiler';
-
+import {Validators, FormGroup, FormControlName ,FormBuilder } from '@angular/forms';
+import { AuthenticationService } from '../_service/authentication.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { first } from 'rxjs/operators';
+import { AlertService } from '../_service/alert.service';
 
 @Component({
   selector: 'app-new-user',
@@ -11,13 +13,11 @@ import { ThrowStmt } from '@angular/compiler';
 export class NewUserComponent implements OnInit {
  employeeFormGroup :FormGroup;
  fullNAmeLength=0;
+ returnUrl: string;
  validationObject={
   'fullName':{
     'required':'Full Name is required',
     'minlength':'min length should be 5 charaters'
-  },
-  'Email':{
-    'required':'Email is required'
   },
   'Password':{
     'required':'Password is required'
@@ -31,42 +31,48 @@ export class NewUserComponent implements OnInit {
 };
 formErrors={
   'fullName':'',
-  'Email':'',
   'Password':'',
   'skillName':'',
   'proficiency':''
 }
  registerForm: FormGroup;
  submitted = false;
-  constructor(private fb:FormBuilder) { }
+ loading = false;
+  constructor(private fb:FormBuilder,
+              private authService : AuthenticationService,
+              private route : Router,
+              private alertService : AlertService,
+              private activateRoute : ActivatedRoute) { 
+                if(this.authService.currentUserValue){
+                  this.route.navigate[('/')];
+                }
+              }
 
   ngOnInit() {
-    this.employeeFormGroup= this.fb.group({
-      fullName:['',[Validators.required , Validators.minLength(4)]],
-      Email:['',[Validators.required,Validators.email]],
-      Password:['',[Validators.required, Validators.minLength(6)]],
-      skills:this.fb.group({
-        skillName:['',Validators.required],
-        proficiency:[false,Validators.required],
+    // this.employeeFormGroup= this.fb.group({
+    //   userName:['',[Validators.required , Validators.minLength(4)]],
+    //   Email:['',[Validators.required,Validators.email]],
+    //   Password:['',[Validators.required, Validators.minLength(6)]],
+    //   skills:this.fb.group({
+    //     skillName:['',Validators.required],
+    //     proficiency:[false,Validators.required],
 
-      })
-    });
-    this.employeeFormGroup.get('fullName').valueChanges.subscribe((value : string)=>{
-      this.fullNAmeLength =  value.length ;
-    })
-  //   this.registerForm = this.fb.group({
-  //     title: ['', Validators.required],
-  //     firstName: ['', Validators.required],
-  //     lastName: ['', Validators.required],
-  //     email: ['', [Validators.required, Validators.email]],
-  //     password: ['', [Validators.required, Validators.minLength(6)]],
-  //     confirmPassword: ['', Validators.required],
-  //     acceptTerms: [false, Validators.requiredTrue]
-  // });
+    //   })
+    // });
+    this.employeeFormGroup = this.fb.group({
+      userName: ['', Validators.required],
+      Password: ['', Validators.required]
+  });
+         // get return url from route parameters or default to '/'
+         this.returnUrl = this.activateRoute.snapshot.queryParams['returnUrl'] || '/';
+         console.log("this,returnul",this.returnUrl)
+    // this.employeeFormGroup.get('fullName').valueChanges.subscribe((value : string)=>{
+    //   this.fullNAmeLength =  value.length ;
+    // })
+
   }
   loadData():void{
     this.logValidationErrors(this.employeeFormGroup);
-    console.log(this.formErrors);
   }
   logValidationErrors(group:FormGroup):void{
     Object.keys(group.controls).forEach((key:string)=>{
@@ -91,32 +97,34 @@ formErrors={
       }
     })
   }
-  get firstname(){
-    return this.employeeFormGroup.get('fullName');
-  }
- 
-  get Email(){
-    return this.employeeFormGroup.get('Email');
-  }
+
       // convenience getter for easy access to form fields
       // get f() { return this.employeeFormGroup.controls; }
           // convenience getter for easy access to form fields
-get s(){
-  return this.employeeFormGroup.controls.skills;
-}
     get f() {
-       return this.employeeFormGroup.controls; }
+       return this.employeeFormGroup.controls;
+       }
 
     onSubmit() {
         this.submitted = true;
-
         // stop here if form is invalid
         if (this.employeeFormGroup.invalid) {
             return;
         }
-
+        this.loading = true;
+         this.authService.login(this.f.userName.value , this.f.Password.value)
+         .pipe(first())
+         .subscribe(
+           data=>{
+             this.route.navigate([this.returnUrl]);
+           },
+           error=>{
+             this.alertService.error(error);
+             this.loading = false;
+           } 
+         )
         //display form values on success
-        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.employeeFormGroup.value, null, 4));
+     //   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.employeeFormGroup.value, null, 4));
     }
 
     onReset() {

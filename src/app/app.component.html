@@ -1,8 +1,5 @@
-
-
-
-<div style="height: 93vh;" >
-    <mat-toolbar color="primary">
+<div maindiv *ngIf="currentUser">
+    <mat-toolbar>
       <mat-toolbar-row>
         <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
           <mat-icon>menu</mat-icon>
@@ -14,7 +11,7 @@
           <!-- The following menu items will be hidden on both SM and XS screen sizes -->
      <ul role="navigation" class="headerlist">
     <li class="ng-star-inserted">
-        <a class="nav-link" routerLink="/home"  title="home">
+        <a class="nav-link" active routerLink="/"  title="home">
           Home
         </a></li>
       <li class="ng-star-inserted">
@@ -23,10 +20,10 @@
           </a>
       </li>
       <li class="ng-star-inserted">       
-        <a [matMenuTriggerFor]="menu">   
-              Gallery          
+        <a  routerLink ="./gallery">   
+              Gallery        
         </a>
-        <mat-menu #menu="matMenu">
+        <!-- <mat-menu #menu="matMenu">
           <button mat-menu-item>
               <a class="nav-link" routerLink="/gallery"  title="gallery">
               My Arts
@@ -37,12 +34,12 @@
                 Caraousel
               </a>
           </button>
-        </mat-menu>
+        </mat-menu> -->
       </li>
       <i class="fa fa-refresh" ></i> 
       <li class="ng-star-inserted">
-          <a class="nav-link" routerLink="/login"  title="login">
-            Login
+          <a class="nav-link" (click)="logout()">
+            Logout
           </a>
             <!-- <span class="nav-link-inner">Contact</span> -->
           
@@ -63,7 +60,7 @@
                     style="    height: 25px;
                     width: 46px;"></a>
                  
-                  <a  style="font-size: 14px;" href="harshap744@gmail.com" >harshap744@gmail.com</a>
+                  <a  style="font-size: 17px;" href="harshap744@gmail.com" >harshap744@gmail.com</a>
                 </div>
               </li>
           </ul>   
@@ -82,10 +79,6 @@
           <a class="nav-link" routerLink="/resume" title="resume">
               Resume
             </a>
-           
-            <a class="nav-link" routerLink="/login"  title="login">
-                Login
-              </a>
         </mat-nav-list>
       </mat-sidenav>
       <mat-sidenav-content fxFlexFill>
@@ -95,11 +88,11 @@
 							<path class="a3" d="M0 40 L30 72 L60 40"></path>
             </svg> -->
             <!-- <button (click)="scrollWin(0, 50)" style="position: fixed">Scroll down</button><br><br> -->
-            <div [@routeAnimations]="prepareRoute(outlet)" >
+            <!-- <div [@routeAnimations]="prepareRoute(outlet)" >
          
                 <router-outlet #outlet="outlet"></router-outlet>
               </div>
-         
+          -->
           <!-- <div class="hero-scroll-down">
               <svg class="arrows" width="22px" height="16px" viewBox="0 0 22 16">
                     <g id="arrow-down" transform="translate(1.000000, 1.000000)" stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -112,6 +105,16 @@
     </mat-sidenav-container>
   </div>
   
+<!-- main app container -->
+<div class="jumbotron1" *ngIf="!currentUser">
+      <div class="col-12 row">
+        <div class="col-6">
+          <app-alert></app-alert>       
+      </div>
+      </div>
+</div>
+<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
  
 
  

@@ -6,21 +6,24 @@ import { NewUserComponent } from './new-user/new-user.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ResumeComponent } from './resume/resume.component';
+import { AuthGuard } from './_guards/auth.guard';
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent,data: {animation: 'HomePage'} },
-  { path: 'newUserLogin',      component: LoginComponent ,data: {animation: 'NewLoginPage'}},
-  {path:'login',component:NewUserComponent,data: {animation: 'LoginPage'} },
+  { path: '', component: HomeComponent,data: {animation: 'HomePage'}, canActivate:[AuthGuard] },
+  // { path: 'newUserLogin',      component: LoginComponent ,data: {animation: 'NewLoginPage'}},
+  {path:'login',component : NewUserComponent },
+  {path:'register',component : LoginComponent ,data: {animation: 'NewLoginPage'}},
   {path:'gallery',component:GalleryComponent},
   {path:'carousel',component:CarouselComponent},
   {path:'resume',component:ResumeComponent},
   { path: 'assets/file.pdf', redirectTo: '../assets/file.pdf'},
   
 
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+
+  { 
+     path: '**', redirectTo: '' 
+
   }
   
 ];

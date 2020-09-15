@@ -1,49 +1,88 @@
 <div class="row mainDiv">
     <div class="col-6">
-           
-                    <p style="text-align: center">
-                  
+           <p style="text-align: center">   
             <figure class="figure" *ngFor="let img of images">
                     <img src="{{img.path}}" class="rounded-circle profileImage figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                     <figcaption class="figure-caption">{{img.figCaption}}</figcaption>
-                </figure>
-                 
+             </figure>        
     </div>
     <div class="col-6">
-            <form class="form-horizontal container" [formGroup]="empFormGroup" (ngSubmit)="onSubmit()">          
-                    <h3 class="">Create User</h3> 
-                  
-                    <div class="form-group">
-                        <label class="control-label" for="fullName">Full Name : </label>
-                        <div >
-                            <input type="text" formControlName="fullName" id="fullName" class="form-control">
+        <form class="form-horizontal container" [formGroup]="empFormGroup" (ngSubmit)="onSubmit()">          
+                <h3 class="">Create User</h3> 
+                <div class="form-group">
+                    <label for="firstName">First Name </label>
+                        <input type="text" formControlName="firstName" class="form-control"
+                         [ngClass]="{'is-invalid':submitted && f.firstName.errors}">
+                         <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
                         </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" formControlName="lastName" class="form-control" 
+                    [ngClass]="{'is-invalid': submitted && f.lastName.errors }" />
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
                     </div>
-                    <div class="form-group">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">User Name</label>
+                    <input type="text" formControlName="userName" class="form-control" 
+                    [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />
+                    <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                        <div *ngIf="f.userName.errors.required">User Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="userName">Password</label>
+                    <input type="text" formControlName="password" class="form-control" 
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+                </div>
+                <div class="btn-toolbar center">
+                <button  [disabled]="loading"  class="btn buttonsave " type="submit">
+                    Register
+                </button>
+                <button  routerLink='/login'  class="btn buttonCancel " type="submit">
+                    Cancel
+                </button>
+                <!-- <button [disabled]="loading" class="btn btn-primary">Register</button> -->
+                <!-- <button class="btn btn-primary" (click)="loadData()" style=" width: 100%;" type="button">
+                    Load Data
+                </button> -->
+                <div *ngIf="loading">
+                    <h4>Loading....</h4>
+                </div>
+                </div>            
+        </form>
+    </div>
+</div>
+
+   
+
+
+     <!-- <div class="form-group">
                             <label class="control-label" for="Email">Email Adress : </label>
                             <div >
                                 <input type="email" formControlName="Email"  id="Email" class="form-control">
                             </div>
-                        </div>
-                        <div class="form-group">
+                        </div> -->
+                        <!-- <div class="form-group">
                                 <label class=" control-label" for="Phone">Phone Number : </label>
                                 <div class="">
                                     <input type="number"  formControlName="Phone" id="Phone" class="form-control">
                                 </div>
-                            </div>
-                        <div class="form-group">
+                            </div> -->
+                        <!-- <div class="form-group">
                                 <label class=" control-label" for="DateOfBirth">Date of Birth : </label>
                                 <div class="">
                                     <input type="date" formControlName="DateOfBirth"  id="DateOfBirth" class="form-control">
                                 </div>
-                            </div>
-                        <div class="form-group">
-                                <label class="control-label" for="Password">Password : </label>
-                                <div class="">
-                                    <input type="password" formControlName="Password"  id="Password" class="form-control">
-                                </div>
-                        </div>
-                        <div class="form-group">
+                            </div> -->
+                    
+                        <!-- <div class="form-group">
                                 <label class="control-label" for="Password">Gender : </label>
                                 <div class="">
                                     <select class="form-control" formControlName="Gender"   id="Gender">
@@ -52,8 +91,8 @@
                                         
                                     </select>
                                 </div>
-                        </div>
-                        <div formGroupName="skills">
+                        </div> -->
+                        <!-- <div formGroupName="skills">
                             <div class="form-group">
                                 <label class=" control-label" for="Password">SkillName : </label>
                                 <div class="">
@@ -62,8 +101,8 @@
                                 <div class="">
                                     <input type="number" placeholder="Expeireince in years" formControlName="expInYears">
                                 </div>  
-                            </div>
-                            <div class="form-group">
+                            </div> -->
+                            <!-- <div class="form-group">
                                     <div class="col-md-4">
                                         <label class="control-label">Proficiency</label>
                                     </div>
@@ -78,18 +117,4 @@
                                                 <input type="radio" formControlName="proficiency" value="Expert">
                                         </label>
                                     </div>                                                   
-                                 </div>          
-                       <div class="btn-toolbar center">
-                        <button class="btn buttonsave " type="submit">
-                                Submit
-                            </button>
-                        <button class="btn btn-primary" (click)="loadData()" style=" width: 100%;" type="button">
-                            Load Data
-                        </button>
-                    </div>            
-            </div>
-    
-        </form>
-    </div>
-</div>
-   
+                                 </div>           -->

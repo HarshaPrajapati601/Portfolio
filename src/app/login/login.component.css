@@ -26,6 +26,16 @@ input{
     opacity: 0.9;
     margin-bottom: 17px;
   }
+  .buttonCancel {
+    background-color: #EDEBE6;
+    color: #4CAF50;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    margin-bottom: 17px;
+  }
   
   .btn:hover {
     opacity: 1;

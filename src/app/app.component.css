@@ -6,8 +6,11 @@ body {
     height: 7500px;
     width: 5000px;
   }
-.mat-toolbar-multiple-rows {
+/* .mat-toolbar-multiple-rows {
     min-height: 64px;
+} */
+.maindiv{
+    height: 93vh
 }
 .designlogo{
     font-size: 19px;
@@ -15,6 +18,13 @@ body {
 }
 .mat-list-base{
     width: 221px;
+}
+.jumbotron1{
+    position: relative;
+    top: 70px;
+    left: 47px;
+    display: flex;
+    width: 50%;
 }
 .mat-icon-button{
     padding: 0;
@@ -52,8 +62,9 @@ body {
     align-items: center;
 }
 .headerlist a{
-    color:navy !important;
+ color:#c39960 !important;
 }
+
 .headerlist a:hover{
     color:grey !important;
 }
@@ -66,6 +77,8 @@ body {
 
     .mat-toolbar-row, .mat-toolbar-single-row{
         justify-content: space-between;
+        background-color: #3a2b17;
+        color: #c39960;
     }
 .mat-drawer-container{
     height: 100%;

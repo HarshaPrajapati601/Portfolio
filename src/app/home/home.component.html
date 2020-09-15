@@ -1,43 +1,80 @@
-<ngb-carousel>
-        <ng-template ngbSlide>
-                <div class="carousel-caption">
+
+               <div class="bgimage">
+                    <!-- <img src="../../assets/images/computerpen.jpg" class="imagebook" alt="Notebook" style="width:100%;"> -->
                         <div class="col-12">
                                 <p style="text-align: center">
-                                    <figure class="figure">
-                                        <img src="../assets/images/cartoonGirl.jpg" ngbTooltip="Welcome to My Portfolio !"
+                                    <figure class="figure" Tooltip="Welcome to My Portfolio !">
+                                        <img src="../assets/images/cartoonGirl.jpg" 
                                         tooltipClass="my-custom-class"  class="rounded-circle profileImage figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
                                         <figcaption class="figure-caption">Art is Not what you SEE</figcaption>
                                     </figure>
                                 </p> 
-                            </div>
-                        <div class="col-12">
-                                <div class="well" ngbTooltip="ASP.net and jquery I know the basics" style="text-align: center">
-                                    <h1>Hello , I'm Harsha!</h1>
-                                    <h4>FrontEnd Web Developer</h4>
-                                    <h3>Html/Css | Javascript | Angular 7 | Jquery | Sql | Asp Dot Net </h3>            
-                                </div>
-                            </div>
                           </div>
-          <div class="picsum-img-wrapper">
-                <video class="video-fluid" autoplay loop muted>
-                        <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
-              </video>
-          </div>
-      
-        </ng-template>
-      </ngb-carousel>
-      
-      <hr>
-      
+                          
+                             
+                            
+                            <div style="height: 300px;"  [@slideInOut]> IN 
+                                <div class="col-12">
+                           
+                                    <div class="content" ngbTooltip="Node.js and jquery I know the basics" style="text-align: center">
+                                        <h1>Hello , I'm Harsha!</h1>
+                                        <h4>FrontEnd Web Developer</h4>
+                                        <h3>Html/Css | Javascript | Angular 7 | Jquery | Sql | Node.js </h3>            
+                                    </div>
+                            </div>
+                            </div>
+                              <button mat-button (click)="toggle($event)" class="buttondown"
+                              [ngClass]="{ 'rotatearrow': rotatearrow === true }" >
+                                  <img src="../../assets/images/carouselImage/thin-arrowheads-pointing-down.svg" class="arrowdown"
+                                  ></button>
+                             
+                             <!-- <div *ngIf="!show" [@slideInOut]>    
+                                  <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+                                        
+                                            
+                                              <ul class="navbar-nav">
+                                                <li class="nav-item"><a class="nav-link"  (click)="scrollTo('section1')"
+                                                  [ngClass]="{ 'current-section': currentSection === 'section1' }">Section 1
+                                                   
 
-      <!-- <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-            <ngb-panel title="Simple">
-              <ng-template ngbPanelContent>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-                aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                
-              </ng-template>
-            </ngb-panel>
-            
+                                                </a></li>
+                                               
+                                               
+                                              </ul>
+                                        
+                                      </nav>    
+                                       -->
+                                   <!-- <div  style="height:700px;">
+                                    
+                                        <div id="section1" class="container-fluid">
+                                          <h1>Section 1</h1>
+                                          <div class="container">
+                                            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+                                                    <ng-container matColumnDef="id">
+                                                      <th mat-header-cell *matHeaderCellDef> Id </th>
+                                                      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                                                    </ng-container>
+                                                    <ng-container matColumnDef="name">
+                                                      <th mat-header-cell *matHeaderCellDef> Name </th>
+                                                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                                    </ng-container>
+                                                    <ng-container matColumnDef="full_name">
+                                                      <th mat-header-cell *matHeaderCellDef> Full Name </th>
+                                                      <td mat-cell *matCellDef="let element"> {{element.full_name}} </td>
+                                                    </ng-container>
+                                                    <ng-container matColumnDef="commits_url">
+                                                        <th mat-header-cell *matHeaderCellDef> commits url </th>
+                                                        <td mat-cell *matCellDef="let element"> {{element.commits_url}} </td>
+                                                        </ng-container>     
+                                                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                                  </table>
+                                                  <mat-paginator [pageSizeOptions]="[5, 10, 20]" ></mat-paginator>           
+                                    </div>
+                                  </div>
+                                    </div>          
+                                  </div>
+                                </div>
+                                  -->
           
-          </ngb-accordion> -->
+      

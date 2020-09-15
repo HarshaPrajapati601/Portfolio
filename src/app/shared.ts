@@ -1,5 +1,6 @@
 import { MatIconModule, MatToolbarModule,MatButtonModule, MatFormFieldModule,MatSidenavModule, MatListModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from "@angular/flex-layout";
 //for material modules
 import {A11yModule} from '@angular/cdk/a11y';
@@ -40,6 +41,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgModule } from '@angular/core';
+
+
 //lightbox
 import { LightboxModule } from 'ngx-lightbox';
 
@@ -55,7 +58,8 @@ import { LightboxModule } from 'ngx-lightbox';
             MatSidenavModule,
             MatListModule,
             BrowserAnimationsModule,
-            FontAwesomeModule
+            FontAwesomeModule,
+            BrowserModule
         ],
  declarations: [],
  exports: [    A11yModule,
@@ -100,8 +104,6 @@ import { LightboxModule } from 'ngx-lightbox';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
-           
-           
             MatButtonModule,
             MatFormFieldModule
            
