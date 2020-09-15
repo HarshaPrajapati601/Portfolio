@@ -20,8 +20,10 @@ const routes: Routes = [
   { path: 'assets/file.pdf', redirectTo: '../assets/file.pdf'},
   
 
+
   { 
      path: '**', redirectTo: '' 
+
   }
   
 ];
