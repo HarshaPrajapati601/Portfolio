@@ -1,4 +1,4 @@
-<div maindiv *ngIf="currentUser">
+<div maindiv>
     <mat-toolbar>
       <mat-toolbar-row>
         <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
@@ -38,8 +38,8 @@
       </li>
       <i class="fa fa-refresh" ></i> 
       <li class="ng-star-inserted">
-          <a class="nav-link" (click)="logout()">
-            Logout
+          <a class="nav-link" routerLink='/login' (click)="login()">
+            Login
           </a>
             <!-- <span class="nav-link-inner">Contact</span> -->
           
@@ -88,11 +88,11 @@
 							<path class="a3" d="M0 40 L30 72 L60 40"></path>
             </svg> -->
             <!-- <button (click)="scrollWin(0, 50)" style="position: fixed">Scroll down</button><br><br> -->
-            <!-- <div [@routeAnimations]="prepareRoute(outlet)" >
+            <div [@routeAnimations]="prepareRoute(outlet)" >
          
                 <router-outlet #outlet="outlet"></router-outlet>
               </div>
-          -->
+         
           <!-- <div class="hero-scroll-down">
               <svg class="arrows" width="22px" height="16px" viewBox="0 0 22 16">
                     <g id="arrow-down" transform="translate(1.000000, 1.000000)" stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -106,15 +106,15 @@
   </div>
   
 <!-- main app container -->
-<div class="jumbotron1" *ngIf="!currentUser">
+<!-- <div class="jumbotron1" *ngIf="!currentUser">
       <div class="col-12 row">
         <div class="col-6">
           <app-alert></app-alert>       
       </div>
       </div>
 </div>
-<router-outlet></router-outlet>
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet> -->
+
  
 
  
