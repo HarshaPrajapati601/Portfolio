@@ -12,7 +12,6 @@ import { AlertComponent } from './alert/alert.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {empTitlePipe}  from '../app/common/emp.pipe';
 import { ButtonsShowComponent } from './home/buttons-show/buttons-show.component';
-import { FlexLayoutModule } from "@angular/flex-layout";
 import { NewUserComponent } from './new-user/new-user.component';
 import { EmployeeDataComponent } from './employee-data/employee-data.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -60,7 +59,6 @@ import { fakeBackendProvider } from './_interceptors/fake-backend';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FlexLayoutModule,
     ReactiveFormsModule
   ],  
 //     providers: [

@@ -10,12 +10,11 @@ import { AuthGuard } from './_guards/auth.guard';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent,data: {animation: 'HomePage'}, canActivate:[AuthGuard] },
-  // { path: 'newUserLogin',      component: LoginComponent ,data: {animation: 'NewLoginPage'}},
+  { path: '', component: HomeComponent,data: {animation: 'HomePage'}},
+  // { path: '', component: HomeComponent,data: {animation: 'HomePage'}, canActivate:[AuthGuard] },
   {path:'login',component : NewUserComponent },
   {path:'register',component : LoginComponent ,data: {animation: 'NewLoginPage'}},
   {path:'gallery',component:GalleryComponent},
-  {path:'carousel',component:CarouselComponent},
   {path:'resume',component:ResumeComponent},
   { path: 'assets/file.pdf', redirectTo: '../assets/file.pdf'},
   
