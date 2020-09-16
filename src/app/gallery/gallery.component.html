@@ -21,26 +21,33 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-12 row" *ngIf="paintType == 'nature' ? true : false">  
-                        <div class="thumbnail col-3 col-lg-4 col-sm-6" *ngFor="let image of album; let i=index">                         
-                            <img class="smallImages" [src]="image.thumb" (click)="open(i)" />
-                        </div>                
+        
+            <div class="col-12 row" *ngIf="paintType == 'nature' ? true : false"> 
+                <div class="containerone">
+                    <div class="thumbnail col-3 col-lg-3" *ngFor="let image of album; let i=index">                         
+                        <img imageLoader class="smallImages" src="{{image.thumb}}" (click)="open(i)"/>
+                    </div>   
+                </div>  
             </div>
             <div class="col-12 row" *ngIf="paintType == 'water' ? true : false"> 
-                <div class="containerone">
-                    <div class="thumbnail col-5 col-lg-6" *ngFor="let image of albumWater; let i=index">                         
-                        <img class="imageWater" src="{{image.src}}"/>
+                <div class="containerone col-12">
+                    <div class="thumbnail col-3 col-lg-3" *ngFor="let image of albumWater; let i=index">                         
+                        <img class="smallImages" src="{{image.src}}"/>
                     </div>   
                 </div>  
             </div>
             <div class="col-12 row" *ngIf="paintType == 'abstract' ? true : false"> 
-                    <div class="thumbnail col-3 col-lg-3" style="margin: 35px;" *ngFor="let image of albumAbstract; let i=index">                         
+                <div class="containerone col-12">
+                    <div class="thumbnail col-3 col-lg-3" *ngFor="let image of albumAbstract;">                         
                         <img class="smallImages" [src]="image.src"/>
                 </div>  
             </div>
+            </div>
             <div class="col-12 row" *ngIf="paintType == 'sketches' ? true : false"> 
-                <div class="thumbnail col-4 col-lg-3" style="margin: 35px;" *ngFor="let image of sketeches; let i=index">                         
+                <div class="containerone col-12">
+                <div class="thumbnail col-4 col-lg-3" *ngFor="let image of sketeches; let i=index">                         
                     <img class="smallImages" [src]="image.src"/>
             </div>  
+            </div>
         </div>
      </div>

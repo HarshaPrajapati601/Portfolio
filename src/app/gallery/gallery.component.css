@@ -24,13 +24,13 @@
   
 .thumbnail{
   display: inline-block;
- 
+  margin-right: 74px;
 
 }
 .containerone{
   flex-direction: row;
-  display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .smallImages{

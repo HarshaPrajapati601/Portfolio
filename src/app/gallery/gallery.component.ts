@@ -7,10 +7,11 @@ import { Lightbox } from 'ngx-lightbox';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-  
+  isLoading:boolean
   name = 'Angular';
   album:any = [];
   paintType:string = 'water';
+  loader:string='https://media.giphy.com/media/y1ZBcOGOOtlpC/200.gif';
   albumWater:any =[
     {src:'../../assets/images/Myart/b.jpg','thumb':'../../assets/images/Myart/b.jpg'},
     {src:'../../assets/images/Myart/b1.jpg','thumb':'../../assets/images/Myart/b1.jpg'}
@@ -31,6 +32,7 @@ export class GalleryComponent implements OnInit {
     {src:'../../assets/images/Myart/a24.jpg','thumb':'../../assets/images/Myart/a24.jpg'},
   ]
   constructor(private _lightbox: Lightbox) {
+    this.isLoading = true;
     this.album.push({'src':'../../assets/images/Myart/l.jpg','caption':'Image 11','thumb':'../../assets/images/Myart/l.jpg'});
     this.album.push({'src':'../../assets/images/Myart/q.jpg','caption':'Image 1','thumb':'../../assets/images/Myart/q.jpg'});
     this.album.push({'src':'../../assets/images/Myart/r.jpg','caption':'Image 1','thumb':'../../assets/images/Myart/r.jpg'});
@@ -55,7 +57,9 @@ export class GalleryComponent implements OnInit {
     // close lightbox programmatically
     this._lightbox.close();
   }
-
+  hideLoader(){
+    this.isLoading=false;
+  }
 
   ngOnInit() {
   }
