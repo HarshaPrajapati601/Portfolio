@@ -68,13 +68,15 @@
     width: 24px;
 }
 .ulList{
-    position: absolute;
-    right: -7px;
-    list-style-type: none;
+    list-style: none;
     display: flex;
+    padding-left: 0;
+    flex-direction: row;
 }
 .ulList li{
     margin-right: 20px;
+    list-style: none;
+    
 }
 .bigImg{
     width: 17%;
