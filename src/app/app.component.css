@@ -13,7 +13,7 @@ body {
     min-height: 64px;
 } */
 .maindiv{
-    height: 93vh
+    margin-top: 63px;
 }
 .designlogo{
     font-size: 19px;
@@ -62,7 +62,7 @@ body {
 
     align-items:flex-start;
 }
-.headerlist a{
+.headerlist a , .navbar-text a{
  color:#c39960 !important;
 }
 .navbar-brand{
