@@ -2,13 +2,6 @@ import { MatIconModule, MatToolbarModule,MatButtonModule, MatFormFieldModule,Mat
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 //for material modules
-import {A11yModule} from '@angular/cdk/a11y';
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import {PortalModule} from '@angular/cdk/portal';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import {CdkStepperModule} from '@angular/cdk/stepper';
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
@@ -60,11 +53,7 @@ import { LightboxModule } from 'ngx-lightbox';
             BrowserModule
         ],
  declarations: [],
- exports: [    A11yModule,
-    CdkStepperModule,
-    CdkTableModule,
-    CdkTreeModule,
-    DragDropModule,
+ exports: [   
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -100,10 +89,8 @@ import { LightboxModule } from 'ngx-lightbox';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    PortalModule,
-    ScrollingModule,
-            MatButtonModule,
-            MatFormFieldModule
+    MatButtonModule,
+    MatFormFieldModule
            
            
           
