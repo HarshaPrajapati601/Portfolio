@@ -103,7 +103,8 @@ ngb-carousel{
   }
   
    img {vertical-align: middle;}
-  
+
+@media(max-width:650px){
   .content {
    
     position: relative;
@@ -111,10 +112,23 @@ ngb-carousel{
     background: rgb(0, 0, 0); /* Fallback color */
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
     color: #f1f1f1;
-    width: 50%;
+    width: 79%;
     margin:0 auto;
     padding: 20px;
   }
+}
+@media(min-width:651px) {
+  .content {
+    position: relative;
+    bottom: 18px;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 90%;
+    margin:0 auto;
+    padding: 20px;
+  }
+}
   /* .imagebook{
     opacity: 0.75;
     background-position: center;
