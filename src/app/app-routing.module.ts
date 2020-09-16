@@ -15,7 +15,6 @@ const routes: Routes = [
   {path:'login',component : NewUserComponent },
   {path:'register',component : LoginComponent ,data: {animation: 'NewLoginPage'}},
   {path:'gallery',component:GalleryComponent},
-  {path:'carousel',component:CarouselComponent},
   {path:'resume',component:ResumeComponent},
   { path: 'assets/file.pdf', redirectTo: '../assets/file.pdf'},
   

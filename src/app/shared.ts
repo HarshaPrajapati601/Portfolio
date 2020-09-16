@@ -1,7 +1,6 @@
 import { MatIconModule, MatToolbarModule,MatButtonModule, MatFormFieldModule,MatSidenavModule, MatListModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { FlexLayoutModule } from "@angular/flex-layout";
 //for material modules
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -49,7 +48,6 @@ import { LightboxModule } from 'ngx-lightbox';
 @NgModule({
     imports:[ 
         LightboxModule,
-            FlexLayoutModule,
             MatIconModule,
             MatToolbarModule,
             MatButtonModule,

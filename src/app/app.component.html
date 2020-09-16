@@ -1,14 +1,12 @@
-<div maindiv>
+<!-- <div maindiv>
     <mat-toolbar>
       <mat-toolbar-row>
-        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <button mat-icon-button (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
           <span class="designlogo">DesignR</span>
         </button>
-        <span fxHide="true" fxShow.gt-sm>DesignR</span>
         <span class="menu-spacer"></span>
-        <div fxShow="true" fxHide.lt-md>
-          <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <div *ngIf="showLargediv">
      <ul role="navigation" class="headerlist">
     <li class="ng-star-inserted">
         <a class="nav-link" active routerLink="/"  title="home">
@@ -22,26 +20,12 @@
       <li class="ng-star-inserted">       
         <a  routerLink ="./gallery">   
               Gallery        
-        </a>
-        <!-- <mat-menu #menu="matMenu">
-          <button mat-menu-item>
-              <a class="nav-link" routerLink="/gallery"  title="gallery">
-              My Arts
-              </a>
-          </button>
-          <button mat-menu-item>
-              <a class="nav-link" routerLink="/carousel"  title="carousel">
-                Caraousel
-              </a>
-          </button>
-        </mat-menu> -->
       </li>
       <i class="fa fa-refresh" ></i> 
       <li class="ng-star-inserted">
           <a class="nav-link" routerLink='/login' (click)="login()">
             Login
           </a>
-            <!-- <span class="nav-link-inner">Contact</span> -->
           
         </li>     
       </ul>    
@@ -82,28 +66,48 @@
         </mat-nav-list>
       </mat-sidenav>
       <mat-sidenav-content fxFlexFill>
-          <!-- <svg class="arrows">
-							<path class="a1" d="M0 0 L30 32 L60 0"></path>
-							<path class="a2" d="M0 20 L30 52 L60 20"></path>
-							<path class="a3" d="M0 40 L30 72 L60 40"></path>
-            </svg> -->
-            <!-- <button (click)="scrollWin(0, 50)" style="position: fixed">Scroll down</button><br><br> -->
+  
             <div [@routeAnimations]="prepareRoute(outlet)" >
          
                 <router-outlet #outlet="outlet"></router-outlet>
               </div>
-         
-          <!-- <div class="hero-scroll-down">
-              <svg class="arrows" width="22px" height="16px" viewBox="0 0 22 16">
-                    <g id="arrow-down" transform="translate(1.000000, 1.000000)" stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <path d="M20.1428571,0.0563380282 L10,7.94366197 L-0.142857143,0.0563380282" id="arrow-1"></path>
-                        <path d="M20.1428571,6.05633803 L10,13.943662 L-0.142857143,6.05633803" id="arrow-2"></path>
-                    </g>
-              </svg>
-            </div> -->
       </mat-sidenav-content>
     </mat-sidenav-container>
-  </div>
+  </div> -->
+
+  <nav class="navbar navbar-expand-lg toolnav navbar-light bg-light fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" routerLink='/' >
+      DesignR
+    </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0 headerlist">
+        <li class="nav-item active">
+          <!-- <a class="nav-link"  routerLink='/' >Home <span class="sr-only">(current)</span></a> -->
+          <a class="nav-link" active routerLink="/"  title="home">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink='/resume' >Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink='/gallery' >Gallery</a>
+        </li>
+      </ul>
+      <!-- <span class="navbar-text my-2 my-lg-0">
+        <a class="nav-link mr-sm-2" routerLink='/login'  href="#" >Login</a>
+      </span> -->
+      <ul class=" my-2 my-lg-0 headerlist" style="padding-left: 0px !important;">
+        <li class="nav-item">
+          <a class="nav-link mr-sm-2" style="padding-left: 0px !important;" routerLink='/login'  href="#" >Login</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
   
 <!-- main app container -->
 <!-- <div class="jumbotron1" *ngIf="!currentUser">
@@ -114,6 +118,10 @@
       </div>
 </div>
 <router-outlet></router-outlet> -->
+<div class="main1">
+  <router-outlet></router-outlet> 
+</div>
+
 
  
 

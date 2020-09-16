@@ -5,7 +5,7 @@
                     <p>My collections and my art</p>
                   
             </span>
-            <div class="containerone">
+            <div class="container2 row">
                 <ul>
                     <li active class="btn btn-default section1">
                         <button type="button" (click)="emitType('water')" class="btn btn-primary">Water Paints</button>
@@ -22,21 +22,45 @@
                 </ul>
             </div>
         
-            <div class="col-12 row" *ngIf="paintType == 'nature' ? true : false"> 
+            <!-- <div class="col-12 row" *ngIf="paintType == 'nature' ? true : false"> 
                 <div class="containerone">
                     <div class="thumbnail col-3 col-lg-3" *ngFor="let image of album; let i=index">                         
-                        <img imageLoader class="smallImages" src="{{image.thumb}}" (click)="open(i)"/>
+                        <img imageLoader class="smallImagesc" src="{{image.thumb}}" (click)="open(i)"/>
                     </div>   
                 </div>  
-            </div>
-            <div class="col-12 row" *ngIf="paintType == 'water' ? true : false"> 
-                <div class="containerone col-12">
+            </div> -->
+            
+            <!-- <div class="col-12 row" *ngIf="paintType == 'water' ? true : false"> 
+                
                     <div class="thumbnail col-3 col-lg-3" *ngFor="let image of albumWater; let i=index">                         
-                        <img class="smallImages" src="{{image.src}}"/>
-                    </div>   
+                        <img class="smallImages img-responsive" src="{{image.src}}"/>
                 </div>  
+            </div> -->
+            <div class="containerone" *ngIf="paintType == 'nature' ? true : false" >
+                <ng-container *ngFor="let image of album;">
+                    <img class="smallImages img-responsive" src="{{image.src}}"/>
+                </ng-container>
+               
             </div>
-            <div class="col-12 row" *ngIf="paintType == 'abstract' ? true : false"> 
+            <div class="containerone" *ngIf="paintType == 'water' ? true : false" >
+                <ng-container *ngFor="let image of albumWater;">
+                    <img class="smallImages img-responsive" src="{{image.src}}"/>
+                </ng-container>
+               
+            </div>
+            <div class="containerone" *ngIf="paintType == 'sketches' ? true : false" >
+                <ng-container *ngFor="let image of sketeches;">
+                    <img class="smallImages img-responsive" src="{{image.src}}"/>
+                </ng-container>
+               
+            </div>
+            <div class="containerone" *ngIf="paintType == 'abstract' ? true : false" >
+                <ng-container *ngFor="let image of albumAbstract;">
+                    <img class="smallImages img-responsive" src="{{image.src}}"/>
+                </ng-container>
+               
+            </div>
+            <!-- <div class="col-12 row" *ngIf="paintType == 'abstract' ? true : false"> 
                 <div class="containerone col-12">
                     <div class="thumbnail col-3 col-lg-3" *ngFor="let image of albumAbstract;">                         
                         <img class="smallImages" [src]="image.src"/>
@@ -47,7 +71,6 @@
                 <div class="containerone col-12">
                 <div class="thumbnail col-4 col-lg-3" *ngFor="let image of sketeches; let i=index">                         
                     <img class="smallImages" [src]="image.src"/>
-            </div>  
+            </div>   -->
             </div>
-        </div>
-     </div>
+   

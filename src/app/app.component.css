@@ -2,6 +2,9 @@ mat-toolbar.mat-toolbar mat-toolbar-row{
     padding: 19px 0px 22px 18px;
 
 }
+.main1{
+    margin-top: 55px;
+}
 body {
     height: 7500px;
     width: 5000px;
@@ -54,15 +57,16 @@ body {
 }
 .headerlist{
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    
+
     margin-top: 19px;
 
-    align-items: center;
+    align-items:flex-start;
 }
 .headerlist a{
  color:#c39960 !important;
+}
+.navbar-brand{
+    color :#dec69e !important;
 }
 
 .headerlist a:hover{
@@ -75,9 +79,9 @@ body {
     
 }
 
-    .mat-toolbar-row, .mat-toolbar-single-row{
+    .mat-toolbar-row, .mat-toolbar-single-row,.toolnav{
         justify-content: space-between;
-        background-color: #3a2b17;
+        background-color: #3a2b17 !important;
         color: #c39960;
     }
 .mat-drawer-container{
