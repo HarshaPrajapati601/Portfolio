@@ -13,7 +13,7 @@ mat-toolbar.mat-toolbar mat-toolbar-row{
     background-size: cover;
     height: 100%;
     min-height: 96vh;
-    background-image: url("../../assets/images/computerpen.jpg");
+    background-image: url("../../assets/images/N.jpg");
 }
 .mat-toolbar-multiple-rows {
     min-height: 64px;
