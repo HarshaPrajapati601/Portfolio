@@ -2,8 +2,7 @@
   "name": "angular-portfolio",
   "version": "0.0.0",
   "engine": {
-    "node": "10.16.3",
-    "npm": "6.9.0"
+    "node": "16.x.x"
   },
   "scripts": {
     "ng": "ng",
